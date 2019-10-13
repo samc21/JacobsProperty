@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="home">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jacobs Property</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/site.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <a class="navbar-brand" href="#"><img src="assets/logo.png" height="50" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-phone" href="tel:01604 123456">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
+                                01604 123456
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="current-properties.html">Current Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Admin Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Body -->
+        <div class="container">
+            <div class="content content-start fly-down">
+                <h1>Current Properties</h1>
+                <p>Currently we let dwellings within the Northampton area with properties close to the town centre, accessible to the train station, and those in more suburban neighbourhoods. Please see advertisements below of dwellings currently available for rent:</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card mb-2 fly-up">
+                        <img class="card-img-top" src="assets/terraced.jpg" alt="Terraced House" />
+                        <div class="card-body">
+                            <h5 class="card-title">123 This Street</h5>
+                            <p>A double room within a shared living house on this street. Good links to the local train station. Ideal for a working professional.</p>
+                            <button type="button" class="btn btn-primary btn-block">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card mb-2 fly-up">
+                        <img class="card-img-top" src="assets/detached.jpg" alt="Detached House" />
+                        <div class="card-body">
+                            <h5 class="card-title">123 That Street</h5>
+                            <p>A fully detached, 3 bedroom house with a large garden, ideal for families. Lovely neighbourhood with good access to town centre.</p>
+                            <button type="button" class="btn btn-primary btn-block">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card mb-2 fly-up">
+                        <img class="card-img-top" src="assets/apartment.jpg" alt="Apartment" />
+                        <div class="card-body">
+                            <h5 class="card-title">123 The Other Street</h5>
+                            <p>A 2 bedroom apartment with large open plan kitchen dining room. Secure gated parking.</p>
+                            <button type="button" class="btn btn-primary btn-block">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enquire fly-right">
+                <h2>Enquire Today!</h2>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="list-group list-group-item mb-2 mb-md-0 email" href="mailto:enquires@jacobsproperty.co.uk">enquires@jacobsproperty.co.uk</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="list-group list-group-item phone" href="tel:01604 123456">01604 123456</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/d13581a4ee.js" crossorigin="anonymous"></script>
+        <script>
+            // The debounce function receives our function as a parameter
+            const debounce = (fn) => {
+                let frame;
+                return (...params) => {
+                    if (frame) { 
+                        cancelAnimationFrame(frame);
+                    }
+
+                    frame = requestAnimationFrame(() => {
+                        fn(...params);
+                    });
+                } 
+            };
+
+
+            // Reads out the scroll position and stores it in the data attribute
+            // so we can use it in our stylesheets
+            const storeScroll = () => {
+                document.documentElement.dataset.scroll = window.scrollY;
+            }
+
+            // Listen for new scroll events, here we debounce our `storeScroll` function
+            document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+
+            storeScroll();
+        </script>
+    </body>
+</html>
