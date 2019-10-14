@@ -233,9 +233,33 @@ body {
   background-color: rgba(255, 255, 255, 0.975);
 }
 
+.navbar-collapse.show {
+  background-color: rgba(171, 186, 168, 0.5);
+}
+
+.custom-toggler {
+  border: 1px solid white;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 .nav-phone {
   font-weight: 500;
   font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-phone {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 464px) {
+  .nav-phone {
+    display: none;
+  }
 }
 
 .nav-phone svg {
@@ -362,12 +386,20 @@ body {
 
 .property-manage .manage-text .hover-block i {
   position: relative;
-  top: 105px;
-  right: -45px;
-  font-size: 32px;
+  top: 130px;
+  right: -55px;
+  font-size: 40px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   color: white;
+}
+
+@media only screen and (max-width: 1500px) {
+  .property-manage .manage-text .hover-block i {
+    top: 105px;
+    right: -45px;
+    font-size: 32px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -455,12 +487,20 @@ body {
 
 .view-listings .listing-text .hover-block i {
   position: relative;
-  top: 90px;
+  top: 115px;
   right: -20px;
-  font-size: 32px;
+  font-size: 40px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   color: deepskyblue;
+}
+
+@media only screen and (max-width: 1500px) {
+  .view-listings .listing-text .hover-block i {
+    top: 90px;
+    right: -20px;
+    font-size: 32px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
