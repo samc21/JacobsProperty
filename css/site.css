@@ -316,7 +316,8 @@ body {
 
 .enquire {
   margin-top: 40px;
-  background-color: palegreen;
+  background-color: lightgreen;
+  background-color: rgba(144, 238, 144, 0.95);
   text-align: center;
   padding: 40px;
   position: relative;
@@ -361,8 +362,20 @@ body {
   content: '\f0e0';
 }
 
+@media only screen and (max-width: 375px) {
+  .email:before {
+    content: '';
+  }
+}
+
 .phone:before {
   content: '\f095';
+}
+
+@media only screen and (max-width: 375px) {
+  .phone:before {
+    content: '';
+  }
 }
 
 .property-manage {

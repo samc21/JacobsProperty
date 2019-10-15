@@ -222,7 +222,8 @@ body {
 
 .enquire {
     margin-top: 40px;
-    background-color:palegreen;
+    background-color: rgb(144, 238, 144);
+    background-color: rgba(144, 238, 144, 0.95);
     text-align: center;
     padding: 40px;
     position: relative;
@@ -261,10 +262,18 @@ body {
 
 .email:before {
     content: '\f0e0';
+
+    @media only screen and (max-width: 375px) {
+        content: '';
+    }
 }
 
 .phone:before {
     content: '\f095';
+
+    @media only screen and (max-width: 375px) {
+        content: '';
+    }
 }
 
 .property-manage {
