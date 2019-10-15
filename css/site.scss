@@ -147,6 +147,10 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     line-height: 1.75rem;
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 992px) {
+        margin-bottom: 10px;
+    }
 }
 
 .content-start {
@@ -271,6 +275,10 @@ body {
     margin-bottom: 40px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
+    @media only screen and (max-width: 992px) {
+        margin-bottom: 10px;
+    }
+
     .manage-text {
         height: 100%;
         width: 100%;
@@ -382,6 +390,10 @@ body {
     position: relative;
     margin-bottom: 40px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    @media only screen and (max-width: 992px) {
+        margin-bottom: 10px;
+    }
 
     // img {
     //     transition: all 0.3s ease-in-out;
