@@ -154,7 +154,7 @@ body {
 }
 
 .navbar-collapse.show {
-    background-color: rgba(171, 186, 168, 0.5);
+    background-color: rgba(171, 186, 168, 0.8);
 }
 
 .custom-toggler {
@@ -204,6 +204,16 @@ body {
     padding: 20px 30px;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    @media only screen and (max-width: 992px) {
+        width: 75%;
+        transform: translate(20%, 0);
+    }
+
+    @media only screen and (max-width: 576px) {
+        width: 100%;
+        transform: translate(0, 0);
+    }
 }
 
 .enquire {
@@ -275,6 +285,20 @@ body {
             top: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
+
+            @media only screen and (max-width: 768px) {
+                font-size: 26px;
+            }
+
+            @media only screen and (max-width: 576px) {
+                font-size: 24px;
+                transform: translate(-48%, -50%);
+            }
+
+            @media only screen and (max-width: 420px) {
+                font-size: 14px;
+                transform: translate(-46%, -50%);
+            }
         }
 
         .hover-block {
@@ -286,6 +310,11 @@ body {
             transform: rotate(-45deg);
             bottom: -120%;
             transition: all 0.4s ease-in-out;
+
+            @media only screen and (max-width: 768px) {
+                right: 0;
+                bottom: -45%;
+            }
     
             i {
                 position: relative;
@@ -318,12 +347,18 @@ body {
                     right: -50%;
                     font-size: 16px;
                 }
-            }
-        }
 
-        @media only screen and (max-width: 768px) {
-            h2 {
-                font-size: 26px;
+                @media only screen and (max-width: 425px) {
+                    top: 25%;
+                    right: -50%;
+                    font-size: 14px;
+                }
+
+                @media only screen and (max-width: 375px) {
+                    font-size: 10px;
+                    top: 18%;
+                    right: -52%;
+                }
             }
         }
     }
@@ -360,13 +395,20 @@ body {
         h2 {
             font-size: 42px;
             width: 85%;
-            margin-bottom: 20px;
             color: white;
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-55%, -50%);
             text-align: center;
+
+            @media only screen and (max-width: 768px) {
+                font-size: 30px;
+            }
+
+            @media only screen and (max-width: 420px) {
+                font-size: 18px;
+            }
         }
     
         .hover-block {
@@ -378,6 +420,11 @@ body {
             transform: rotate(45deg);
             bottom: -70%;
             transition: all 0.4s ease-in-out;
+
+            @media only screen and (max-width: 768px) {
+                bottom: -50%;
+                right: -80%;
+            }
     
             i {
                 position: relative;
@@ -405,16 +452,22 @@ body {
                 }
 
                 @media only screen and (max-width: 768px) {
-                    top: 25%;
-                    right: -15%;
-                    font-size: 20px;
+                    top: 22%;
+                    right: -12%;
+                    font-size: 18px;
                 }
-            }
-        }
-            
-        @media only screen and (max-width: 768px) {
-            h2 {
-                font-size: 32px;
+
+                @media only screen and (max-width: 425px) {
+                    font-size: 14px;
+                    top: 19%;
+                    right: -14%;
+                }
+
+                @media only screen and (max-width: 375px) {
+                    top: 16%;
+                    right: -15%;
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -431,6 +484,32 @@ body {
             @media only screen and (max-width: 1200px) {
                 bottom: -45%;
             }
+        }
+    }
+}
+
+.account-buttons {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    height: 50px;
+
+    button:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        width: 50%;
+    }
+
+    button:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 50%;
+
+        @media only screen and (max-width: 406px) {
+            font-size: 0.75rem;
         }
     }
 }
